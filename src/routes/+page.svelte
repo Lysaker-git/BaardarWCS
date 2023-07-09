@@ -8,25 +8,38 @@
   
   export let data;
   const posts = data.items;
+  
   let myItems = posts.map((post) => {
     let items = post.filter((item) => {
-      const itemLanguage = item.Language ? item.Language.toLowerCase() : '';
-      const type = item.type;
-      const body = item[type].rich_text[0].plain_text;
-      return itemLanguage === language_value;
+      try {
+        const itemLanguage = item.Language ? item.Language.toLowerCase() : '';
+        const type = item.type;
+        const richText =item[type].rich_text[0].plain_text
+        const body = richText ? richText : '';
+        return itemLanguage === language_value;
+      } catch (error) {
+        console.log(error)
+        return { itemLanguage: error.message };
+      }
     }).map((item) => {
-      const type = item.type;
-      const body = item[type].rich_text[0].plain_text;
-      return {
-        Lang: language,
-        body: body,
-        type: type
-      };
+      try {
+        const id = item.id;
+        const type = item.type;
+        const body = item[type].rich_text[0].plain_text;
+        return {
+          Lang: language,
+          body: body,
+          type: type,
+          id: id,
+        };
+      } catch (error) {
+        console.log(error)
+        return { body: error.message }
+      } 
     });
     return items;
-  });
-  myItems.pop();
-  const finalItems = myItems[0]
+  }).filter((items) => items.length > 0);
+  console.log(myItems[1])
 
   // function updateLang (newValue) {
   //   language.set(newValue)
@@ -34,15 +47,33 @@
   // }
 </script>
 
+
 <h1>Hello</h1>
 
 <!-- <button on:click={updateLang('English')}>English</button>
 <button on:click={updateLang('Norsk')}>Norsk</button> -->
 
-{#each finalItems as item}
-  {#if item.type.toLowerCase().includes('heading')}
-    <h2>{item.body}</h2>
-  {:else if item.type.toLowerCase().includes('paragraph')}
-    <p>{item.body}</p>
-  {/if}
-{/each}
+{#await myItems}
+	<progress></progress>
+{:then myItems}
+  <div class="grid">
+    <div>
+      <section>
+          {#each myItems as item}
+            <article>
+            {#each item as i}
+                {#if i.type.toLowerCase().includes('heading')}
+                  <h2>{i.body}</h2>
+                {:else if i.type.toLowerCase().includes('paragraph')}
+                  <p>{i.body}</p>
+                  <a href='/classes?id={i.id}' role='button' class='secondary'>Read More</a>
+                {/if}
+                {/each}
+            </article>
+          {/each}
+      </section>
+    </div>
+  </div>
+{:catch error}
+	<p style="color: red">{error.message}</p>
+{/await}

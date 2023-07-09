@@ -4,6 +4,7 @@ import { Client } from '@notionhq/client';
 async function returnPage(id, notion) {
   const response = await notion.blocks.children.list({
     block_id: id,
+    page_size: 20,
   });
   const result = response.results;
   return result;
