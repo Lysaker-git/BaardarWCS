@@ -1,4 +1,5 @@
 <script>
+  import WcsAllitems from '../lib/components/WcsAllitems.svelte';
   import { writable } from 'svelte/store';
   const language = writable('norsk');
   let language_value;
@@ -39,7 +40,6 @@
     });
     return items;
   }).filter((items) => items.length > 0);
-  console.log(myItems[1])
 
   // function updateLang (newValue) {
   //   language.set(newValue)
@@ -53,27 +53,4 @@
 <!-- <button on:click={updateLang('English')}>English</button>
 <button on:click={updateLang('Norsk')}>Norsk</button> -->
 
-{#await myItems}
-	<progress></progress>
-{:then myItems}
-  <div class="grid">
-    <div>
-      <section>
-          {#each myItems as item}
-            <article>
-            {#each item as i}
-                {#if i.type.toLowerCase().includes('heading')}
-                  <h2>{i.body}</h2>
-                {:else if i.type.toLowerCase().includes('paragraph')}
-                  <p>{i.body}</p>
-                  <a href='/classes?id={i.id}' role='button' class='secondary'>Read More</a>
-                {/if}
-                {/each}
-            </article>
-          {/each}
-      </section>
-    </div>
-  </div>
-{:catch error}
-	<p style="color: red">{error.message}</p>
-{/await}
+<WcsAllitems items={myItems} />
