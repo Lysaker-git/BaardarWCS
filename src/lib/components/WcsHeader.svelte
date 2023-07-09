@@ -1,5 +1,6 @@
 <script>
     import logo from '$lib/components/assets/WCS-Club_txt.svg';
+    import WcsNavLinks from './WcsNavLinks.svelte';
 </script>
 
 <header>
@@ -8,22 +9,7 @@
             <img src={logo} alt='logo' />
         </a>
     </div>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/classes">Classes</a>
-            </li>
-            <li>
-                <a href="/events">Events</a>
-            </li>
-            <li>
-                <a href="/about">The Team</a>
-            </li>
-        </ul>
-    </nav>
+    <WcsNavLinks />
 </header>
 
 <style>
@@ -34,6 +20,5 @@
     }
     img {
         height: 2rem;
-        fill: red;
     }
 </style>

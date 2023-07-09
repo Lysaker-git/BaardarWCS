@@ -1,7 +1,9 @@
 <script>
-	import WcsSitemap from "./WcsSitemap.svelte";
+	import WcsContact from "./WcsContact.svelte";
+    import WcsNavLinks from "./WcsNavLinks.svelte";
 </script>
 
 <footer>
-    <WcsSitemap />
+    <WcsNavLinks />
+    <WcsContact />
 </footer>
