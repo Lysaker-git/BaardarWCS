@@ -10,7 +10,7 @@
             <article>
               {#each item as i}
                 {#if i.type.toLowerCase().includes('heading')}
-                  <h2>{i.body}</h2>
+                  <h3>{i.body}</h3>
                 {:else if i.type.toLowerCase().includes('paragraph')}
                   {#if i.body.split(' ').length > 15}
                     <p>{i.body.split(' ').slice(0, 15).join(' ')}...</p>
@@ -40,7 +40,7 @@
         display: flex;
         flex-direction: column;
     }
-    article h2 {
+    article h3 {
         margin-bottom: auto;
     }
     article p {

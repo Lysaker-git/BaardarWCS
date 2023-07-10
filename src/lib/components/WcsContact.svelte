@@ -1,5 +1,4 @@
 <form>
-    <div class=grid>
         <label for="firstname">
             First name
             <input type="text" id="firstname" name="firstname" placeholder="" required>
@@ -20,5 +19,23 @@
             <option>Alt 3</option>
             <option>Alt 4</option>
         </select>
-    </div>
+        <label for="textarea">
+            What can we help you with? 
+            <textarea
+                style="resize: none;"
+                type="textarea" 
+                id="textarea" 
+                name="textarea" 
+                placeholder="" 
+                required 
+            />
+        </label>
+        <button type='submit'>Send</button>
 </form>
+
+<style>
+    form {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+</style>

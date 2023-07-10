@@ -4,6 +4,20 @@
 </script>
 
 <footer>
+    <div>
+        <article>
+            <WcsContact />
+        </article>
+    </div>
     <WcsNavLinks />
-    <WcsContact />
 </footer>
+
+<style>
+    article {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    footer {
+        margin-bottom: 5rem;
+    }
+</style>
