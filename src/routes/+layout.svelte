@@ -1,14 +1,16 @@
-<header>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/classes">Classes</a>
-        <a href="/events">Events</a>
-        <a href="/about">The Team</a>
-    </nav>
-</header>
-
-<slot />
-
-<footer>
-    <h2>My footer</h2>
-</footer>
+<script>
+	import WcsThemeProvider from './../lib/components/WcsThemeProvider.svelte';
+	import WcsFooter from './../lib/components/WcsFooter.svelte';
+    import WcsHeader from "../lib/components/WcsHeader.svelte";
+    import WcsWrapper from "../lib/components/WcsWrapper.svelte";
+    import '@picocss/pico';
+</script>
+<WcsThemeProvider>
+    <WcsWrapper>
+        <WcsHeader />
+    </WcsWrapper>
+        <slot />
+    <WcsWrapper>
+        <WcsFooter />
+    </WcsWrapper>
+</WcsThemeProvider>
