@@ -3,7 +3,7 @@
     import WcsNavLinks from './WcsNavLinks.svelte';
 </script>
 
-<header>
+<header class="container">
     <div>
         <a href="/">
             <img src={logo} alt='logo' />
@@ -13,10 +13,13 @@
 </header>
 
 <style>
-    * {
+    header {
+        position: fixed;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 2;
     }
     img {
         height: 2rem;

@@ -8,7 +8,9 @@
 <WcsThemeProvider>
     <WcsWrapper>
         <WcsHeader />
+    </WcsWrapper>
         <slot />
+    <WcsWrapper>
         <WcsFooter />
     </WcsWrapper>
 </WcsThemeProvider>

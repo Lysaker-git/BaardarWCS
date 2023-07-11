@@ -1,4 +1,5 @@
 <script>
+	import WcsWrapper from './../lib/components/WcsWrapper.svelte';
   import WcsAllitems from '../lib/components/WcsAllitems.svelte';
   import { writable } from 'svelte/store';
   const language = writable('norsk');
@@ -47,10 +48,37 @@
   // }
 </script>
 
-
-<h1>Hello</h1>
+<section>
+  <h1>Join our WCS community!</h1>
+</section>
 
 <!-- <button on:click={updateLang('English')}>English</button>
 <button on:click={updateLang('Norsk')}>Norsk</button> -->
+<WcsWrapper>
+  <WcsAllitems items={myItems} />
+</WcsWrapper>
 
-<WcsAllitems items={myItems} />
+<style>
+  section {
+    position: relative;
+    height: 25rem;
+    display: grid;
+    place-content: center;
+    background-image: url(../lib/components/assets/Backdrop.webp);
+    background-position: center center;
+    background-size: cover;
+  }
+  section h1 {
+    z-index: 3;
+  }
+  section::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(16, 13, 68, 0.5);
+    background-blend-mode: multiply;
+    backdrop-filter: blur(3px);
+  }
+
+</style>
