@@ -6,7 +6,7 @@
 </script>
 
 
-<nav >
+<!-- <nav >
     <ul>
         <TabGroup
          active="variant-filled-primary"
@@ -24,4 +24,4 @@
             <TabAnchor  href="/about" selected={$page.url.pathname === '/about'}>About</TabAnchor >
         </TabGroup>
     </ul>
-</nav>
+</nav> -->

@@ -6,7 +6,7 @@
 </script>
 
 
-<nav class="absolute flex items-center h-screen right-0">
+<!-- <nav class="absolute flex items-center h-screen right-0">
     <ul>
         <AppRail>
             <AppRailAnchor href="/" selected={$page.url.pathname === '/'}>Home</AppRailAnchor>
@@ -17,4 +17,4 @@
             <AppRailAnchor href="/about" selected={$page.url.pathname === '/about'}>About</AppRailAnchor>
         </AppRail>
     </ul>
-</nav>
+</nav> -->

@@ -18,7 +18,7 @@
             <PageNav />
     </div>
     {/if}
-    <div class="absolute bottom-7 right-7 z-10">
+    <!-- <div class="absolute bottom-7 right-7 z-10">
         <LightSwitch />
-    </div>
+    </div> -->
 </header>
