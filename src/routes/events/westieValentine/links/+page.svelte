@@ -50,6 +50,7 @@
         <h2 class="h2 font-bold mb-4">
             Food options:
         </h2>
+        <p class="italic">(Each card is a link to the restaurant)</p>
         <div class="">
             <nav class="">
                 <ul class="flex flex-wrap gap-4">
