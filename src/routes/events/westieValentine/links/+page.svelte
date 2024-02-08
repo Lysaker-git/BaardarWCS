@@ -16,7 +16,7 @@
     </section>
     <div class="card overflow-hidden mx-2">
         <section>
-            <img src={schedule} alt="schedule to the event" class=""/>
+            <img src={schedule} alt="schedule to the event" class="mx-auto"/>
         </section>  
     </div>
     <section class="my-5 mx-2 card p-3">
