@@ -11,34 +11,34 @@ export const myRestaurants: Restaurants[] = [
 	{
 		id: 2,
 		name: 'DIGG burger Bislett',
-		details: 'Gastro pub with a different set of typical gastro pub food.',
+		details: 'Burger Joint',
 		rating: 4.2,
-		openingHours: 'Open from 12:00 - 01:00 (23:00 Sunday)',
-		link: 'https://www.frydloren.no/'
+		openingHours: '11:30 Friday (14 Sat and sun) - 22 (21 on Sunday)',
+		link: 'https://diggburger.com/'
 	},
 	{
 		id: 5,
 		name: 'Tullins Cafe',
-		details: 'Standard pizza place. Decent food, mostly pizza.',
-		rating: 3.8,
-		openingHours: 'Open from 13:00 - 23:00',
-		link: 'https://www.peppes.no/forside/aktiv/Peppes_forside.html'
+		details: 'Cafe',
+		rating: 4.3,
+		openingHours: 'Open from 11-02 (23:30 Sunday)',
+		link: 'http://www.tullins.no/'
 	},
 	{
 		id: 7,
 		name: 'Beijing Palace',
-		details: 'A traditional Sushi restaurant',
-		rating: 4.5,
+		details: 'Chinese restaurant',
+		rating: 4.1,
 		openingHours: 'Open from 13:00 - 21:00',
-		link: 'https://umaisushi.no/restaurant/home'
+		link: 'https://beijingpalace.no/'
 	},
 	{
 		id: 8,
 		name: 'Backstube',
 		details: 'Bakery',
-		rating: 4.5,
-		openingHours: 'Open from 13:00 (15:00 Friday) - 23:00 (22:00 Sunday)',
-		link: 'https://www.tiffanys.no/'
+		rating: 4.4,
+		openingHours: 'Open from 07-18',
+		link: 'http://www.backstube.no/'
 	},
 	{
 		id: 9,
